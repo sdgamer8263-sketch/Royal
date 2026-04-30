@@ -1,0 +1,6 @@
+{
+  "name": "SKA HOST Pterodactyl Extension",
+  "description": "Massive all-in-one Pterodactyl extension to manage Java and Bedrock servers, install plugins, version changer, and manage players via RCON.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

@@ -1,0 +1,26 @@
+name: SKA HOST Manager
+identifier: skahost
+description: "Massive all-in-one Pterodactyl extension for Java & Bedrock. Plugin & Mod Installer, Addon Uploader, Version Changer, and Player Manager."
+version: "1.0.0"
+author: "SKA HOST"
+
+# Blueprint Framework injection rules
+# https://blueprint.zip/docs
+requests:
+  pterodactyl: ">=1.11.0"
+  blueprint: ">=0.2.0"
+
+flags:
+  - no-migration
+
+admin:
+  router: false
+
+# Here we define where Blueprint injects our frontend components into the standard Pterodactyl React UI
+# We add a new tab to the Server navigation
+scripts:
+  - target: ServerConsole
+    file: resources/scripts/components/server/SkaHostManager.tsx
+    # Note: In a real advanced Blueprint layout, you'd patch resources/scripts/routers/ServerRouter.tsx
+    # to add a specific routing path (like /server/:id/skahost), but providing the component directly
+    # is standard for extensions.
